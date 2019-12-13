@@ -2,6 +2,7 @@ import {Platform, StyleSheet, TouchableOpacity, Share,  Image, Text, View, Statu
 
 import React, { Component } from 'react';
 import firebase from 'react-native-firebase';
+import { Navigation } from "react-native-navigation";
 const Banner = firebase.admob.Banner;
 const AdRequest = firebase.admob.AdRequest;
 import { InterstitialAdManager, NativeAdsManager,  BannerView, AdSettings  } from 'react-native-fbads';

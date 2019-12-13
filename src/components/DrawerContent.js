@@ -7,11 +7,11 @@ class DrawerContent extends Component {
   state = {
     channels: [
  
-              { screen: 'Profile Screen', title: 'Profile', icon: 'people' },
-       { screen: 'GPA Calculator Screen', title: 'GPA Calculator', icon: 'checklist' },
-       { screen: 'College Fees Screen', title: 'College Fees Screen', icon: 'file-submodule' },
-       { screen: 'Apply Screen', title: 'Apply Screen', icon: 'broadcast' }, 
-       { screen: 'Log Out Screen', title: 'Log Out', icon: 'home' },
+              { screen: 'Registeration Process', title: 'Registeration Process', icon: 'record-voice-over' },
+       { screen: 'Term & Conditions', title: 'Terms & Conditions', icon: 'terrain' },
+       { screen: 'Privacy Policy', title: 'Privacy Policy', icon: 'play-for-work' },
+       { screen: 'About', title: 'About', icon: 'adjust' }, 
+       { screen: 'Log Out Screen', title: 'Log Out', icon: 'settings-power' },
       
     ],
   };
@@ -34,6 +34,18 @@ class DrawerContent extends Component {
           cancelable: false
       }
    )
+   }
+   else if (route == "Term & Conditions") {
+ this.props.navigation.navigate('Terms')
+   }
+   else if (route == "Privacy Policy") {
+ this.props.navigation.navigate('Privacy')
+   }
+    else if (route == "Registeration Process") {
+ this.props.navigation.navigate('Process')
+   }
+    else  {
+ this.props.navigation.navigate('About')
    }
   };
 

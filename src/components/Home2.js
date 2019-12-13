@@ -1,5 +1,5 @@
 import React, { Component} from 'react'
-import {View, Text, Image,TextInput,  Dimensions, TouchableOpacity, FlatList,  Modal, TouchableHighlight} from 'react-native'
+import {View, Text, Image,TextInput,  Dimensions, TouchableOpacity, FlatList,  Modal, TouchableHighlight, ScrollView} from 'react-native'
 import styles from "../styles/styles";
 // import {  Card, Divider, SearchBar, List, ListItem  } from 'react-native-elements';
 // import MapView from 'react-native-maps'
@@ -61,7 +61,10 @@ if(this.props.navigation.state.params)
             heart : false
           };
     }
-  
+   openScreen = (val) => {
+    this.props.navigation.navigate(val)
+
+   }
     setView = (val) => {
       if(val == "list" ) {
         this.setState({mapView: false, listView: true}) 
@@ -132,85 +135,30 @@ return (<View style={styles.container}>
                     <Image style={{width:30, marginLeft:5, marginTop :0,  height:30, }}></Image>
                     </TouchableOpacity>
 
-                    <Text style={styles.toolbarTitle}>Home</Text>
+                    <Text style={styles.toolbarTitle}>Parsome</Text>
+                     <TouchableOpacity onPress={() => this.openMenu()}>
+                    <Image style={{width:30,marginRight:20,  height:30}} source={require('../images/notification.png')}></Image>
+                    </TouchableOpacity>
                     <TouchableOpacity onPress={() => this.openMenu()}>
                     <Image style={{width:30,marginRight:10,  height:30}} source={require('../images/menu.png')}></Image>
                     </TouchableOpacity>
                 </View>
-                <Text style={{alignSelf : 'center', fontSize : 20, marginTop : 20}}>Welcome,  User </Text>
-    <View style={{marginTop:10}}>
+               
+                <ScrollView>
+                <View style={{flex:1, marginBottom :20}}>
+   <View style={{height:150, width:'90%', borderWidth:1, alignSelf : 'center', marginTop:20, borderColor : "#95a5a6"}}>
+   </View>
+    <View style={{height:150, width:'90%', borderWidth:1, alignSelf : 'center', marginTop:20, borderColor : "#95a5a6"}}>
+   </View>
+    <View style={{height:150, width:'90%', borderWidth:1, alignSelf : 'center', marginTop:20, borderColor : "#95a5a6"}}>
+   </View>
+    <View style={{height:150, width:'90%', borderWidth:1, alignSelf : 'center', marginTop:20, borderColor : "#95a5a6"}}>
+   </View>
+    <View style={{height:150, width:'90%', borderWidth:1, alignSelf : 'center', marginTop:20, borderColor : "#95a5a6"}}>
+   </View>
+   </View>
+     </ScrollView>
 
- <View style={styles.row}>
-    <View style={styles.imageDimension2}>
-      <TouchableOpacity style={{alignItems : 'center'}}>
-     <Image  style={styles.imageWidthList2} source={require('../images/food.jpg')} ></Image>
-     </TouchableOpacity>
-    <Text style={styles.textCommon}>Company Information </Text>
-      </View>
-      <View style={styles.imageDimension2}>
-      <TouchableOpacity style={{alignItems : 'center'}}>
-     <Image  style={styles.imageWidthList2} source={require('../images/pro.jpg')} ></Image>
-     </TouchableOpacity>
-    <Text style={styles.textCommon}>Company Information </Text>
-      </View>
-       <View style={styles.imageDimension2}>
-      <TouchableOpacity style={{alignItems : 'center'}}>
-     <Image  style={styles.imageWidthList2} source={require('../images/flaxoil.jpg')} ></Image>
-     </TouchableOpacity>
-    <Text style={styles.textCommon}>Company Information </Text>
-      </View>
-       </View>
-
-</View>
-        <View style={{marginTop:0}}>
-
- <View style={styles.row}>
-    <View style={styles.imageDimension2}>
-      <TouchableOpacity style={{alignItems : 'center'}}>
-     <Image  style={styles.imageWidthList2} source={require('../images/tea.jpg')} ></Image>
-     </TouchableOpacity>
-    <Text style={styles.textCommon}>Company Information </Text>
-      </View>
-      <View style={styles.imageDimension2}>
-      <TouchableOpacity style={{alignItems : 'center'}}>
-     <Image  style={styles.imageWidthList2} source={require('../images/teatreeoil.jpg')} ></Image>
-     </TouchableOpacity>
-    <Text style={styles.textCommon}>Company Information </Text>
-      </View>
-       <View style={styles.imageDimension2}>
-      <TouchableOpacity style={{alignItems : 'center'}}>
-     <Image  style={styles.imageWidthList2} source={require('../images/cookingoil.jpg')} ></Image>
-     </TouchableOpacity>
-    <Text style={styles.textCommon}>Company Information </Text>
-      </View>
-       </View>
-
-</View>
- <View style={{marginTop:0}}>
-
- <View style={styles.row}>
-    <View style={styles.imageDimension2}>
-      <TouchableOpacity style={{alignItems : 'center'}}>
-     <Image  style={styles.imageWidthList2} source={require('../images/cookingoil.jpg')} ></Image>
-     </TouchableOpacity>
-    <Text style={styles.textCommon}>Company Information </Text>
-      </View>
-      <View style={styles.imageDimension2}>
-      <TouchableOpacity style={{alignItems : 'center'}}>
-     <Image  style={styles.imageWidthList2} source={require('../images/DesiGhee.jpg')} ></Image>
-     </TouchableOpacity>
-    <Text style={styles.textCommon}>Company Information </Text>
-      </View>
-       <View style={styles.imageDimension2}>
-      <TouchableOpacity style={{alignItems : 'center'}}>
-     <Image  style={styles.imageWidthList2} source={require('../images/toner.jpg')} ></Image>
-     </TouchableOpacity>
-    <Text style={styles.textCommon}>Company Information </Text>
-      </View>
-       </View>
-
-</View>
-    
     
   
  

@@ -177,7 +177,7 @@ imageDimension2 : {
   width:"23%",
   marginBottom : 20,
   margin:20,
-  backgroundColor : '#8e44ad',
+  backgroundColor : '#bdc3c7',
 
   },
 pickerStyle:{  
@@ -251,13 +251,56 @@ toolbar:{
     },
     toolbarTitle:{
         color:'#fff',
-        textAlign:'center',
+        textAlign:'left',
         fontWeight:'bold',
         flex:1,
         fontSize:20                //Step 3
     },
+    tabsContainerStyle: {
+    //custom styles
+  },
+  tabStyle: {
+    //custom styles
+  },
+  firstTabStyle: {
+    //custom styles
+  },
+  lastTabStyle: {
+    //custom styles
+  },
+  tabTextStyle: {
+    //custom styles
+  },
+  activeTabStyle: {
+    //custom styles
+  },
+  activeTabTextStyle: {
+    //custom styles
+  },
+  tabBadgeContainerStyle: {
+    //custom styles
+  },
+  activeTabBadgeContainerStyle: {
+    //custom styles
+  },
+  tabBadgeStyle: {
+    //custom styles
+  },
+  activeTabBadgeStyle: {
+    //custom styles
+  },
 buttonBackground:{
  marginTop:10,
+ alignSelf:'center',
+  backgroundColor:'#8e44ad',
+  width:"70%",
+  borderRadius:25,
+  height:40,
+  alignItems:'center',
+  justifyContent:'center'
+},
+buttonBackground2:{
+ marginTop:30,
  alignSelf:'center',
   backgroundColor:'#8e44ad',
   width:"70%",

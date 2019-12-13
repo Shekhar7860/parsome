@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Platform, Text, View, TextInput, Image, ImageBackground, TouchableOpacity, StatusBar, ScrollView, TouchableNativeFeedback} from 'react-native';
 import styles from "../styles/styles";
 
-export default class Profile extends Component {
+export default class Process extends Component {
 
   constructor(props){
     super(props);
@@ -96,14 +96,14 @@ export default class Profile extends Component {
     
       <View style={{flex:1}}>
          <View style={styles.toolbar}>
-         <Text style={styles.toolbarButton}></Text>
-                    <Text style={styles.toolbarTitle}>My Leads</Text>
+         <TouchableOpacity onPress={() => this.goBack()}>
+                    <Image style={{width:30,marginLeft:5,  height:30}}source={require('../images/back.png')}></Image>
+                    </TouchableOpacity>
+                    <Text style={styles.toolbarTitle}>Getting Started1</Text>
                     <TouchableOpacity>
                     <Image style={{width:30,marginRight:10,  height:30}}></Image>
                     </TouchableOpacity>
                 </View>
-                <Text>SearchPage </Text>
-                
                
       </View>
       

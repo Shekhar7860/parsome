@@ -134,24 +134,20 @@ signUp = () => {
     }
 render () { 
 return (<View style={styles.container}>
-<View style={styles.toolbar}>
-                     <TouchableOpacity style={styles.toolbarButton}>
-                    <Image style={{width:30, marginLeft:5, marginTop :0,  height:30, }}></Image>
-                    </TouchableOpacity>
 
-                    <Text style={styles.toolbarTitle}>Login</Text>
-                    <TouchableOpacity style={styles.toolbarButton}>
-                   
-                    </TouchableOpacity>
-                </View>
-    <Image  style={styles.imageWidth} source={require('../images/study.jpg')} ></Image>
    
-    <TextInput value={this.state.mobile} onChangeText={(text)=>this.setState({ mobile:text})} style={styles.input} placeholder="Mobile Number"  placeholderTextColor = "black" keyboardType='numeric' maxLength={10}></TextInput>
+   <View style={{marginTop:120}}>
+    <TextInput value={this.state.mobile} onChangeText={(text)=>this.setState({ mobile:text})} style={styles.input} placeholder="UserName"  placeholderTextColor = "black" keyboardType='numeric' maxLength={10}></TextInput>
     <TextInput value={this.state.password} style={styles.input} onChangeText={(text)=>this.setState({ password:text})} placeholder="Password"  placeholderTextColor = "black" secureTextEntry={true}></TextInput>
      <TouchableOpacity style={styles.buttonBackground} onPress={this.goToPage.bind(this, 'Form')}>
         <Text  style={styles.welcomeLoginText}>Login</Text>
         </TouchableOpacity>
-          <Text style={styles.guestText} onPress={this.signUp.bind(this, 'Home2')}>New User? Sign Up</Text>
+          <Text style={styles.guestText} onPress={this.signUp.bind(this, 'Home2')}>Forgot Password? </Text>
+
+           <TouchableOpacity style={styles.buttonBackground2} onPress={this.signUp.bind(this, 'Register')}>
+        <Text  style={styles.welcomeLoginText}>Register</Text>
+        </TouchableOpacity>
+          </View>
       
         
         </View>)} 
